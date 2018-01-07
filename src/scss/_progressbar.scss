@@ -1,0 +1,10 @@
+.progressbar {
+  height: 20px;
+  background: #e6e6e6;
+
+  &-bar {
+    height: 100%;
+    background: #3e4041;
+    transition: transform 2s ease;
+  }
+}
