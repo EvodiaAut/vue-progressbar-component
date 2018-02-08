@@ -1,6 +1,6 @@
 # vue-progressbar-component
 
-> Simple progressbar for vuejs
+> [[CSS GPU Animation](https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/)] Simple progressbar for vuejs
 
 [![npm](https://img.shields.io/npm/v/vue-progressbar-component.svg?style=for-the-badge)](https://www.npmjs.com/package/vue-progressbar-component)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](https://github.com/EvodiaAut/vue-progressbar-component/blob/master/LICENSE.md)
@@ -85,11 +85,8 @@ npm run build
 npm run build --report
 
 # run unit tests
-#[SOON] npm run unit
-
-# run e2e tests
-#[SOON] npm run e2e
+npm run unit
 
 # run all tests
-#[SOON] npm test
+npm test
 ```
