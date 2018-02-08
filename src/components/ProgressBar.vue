@@ -25,16 +25,15 @@ export default {
   },
   data() {
     return {
-      domReady: false
+      ready: false
     }
   },
   mounted() {
-    // DOM rdy
-    setTimeout(() => { this.domReady = true }, 0)
+    setTimeout(() => { this.ready = true }, 0)
   },
   computed: {
     barStyle() {
-      if (!this.domReady) {
+      if (!this.ready) {
         return {
           transform: `scale${this.scale}(0)`
         }
