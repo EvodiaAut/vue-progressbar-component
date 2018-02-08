@@ -8,7 +8,18 @@
           </li>
         </ul>
         <h1 class="text-muted">vue-progressbar-component</h1>
-        <p class="lead">Simple progressbar for vuejs</p>
+        <p class="lead">[<a href="https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/" target="_blank">CSS GPU Animation</a>] Simple progressbar for vuejs</p>
+        <p class="d-flex flex-wrap">
+          <a href="https://www.npmjs.com/package/vue-progressbar-component" target="_blank">
+            <img class="m-1" src="https://img.shields.io/npm/v/vue-progressbar-component.svg?style=for-the-badge" alt="vue-progressbar-component npm">
+          </a>
+          <a href="https://github.com/EvodiaAut/vue-progressbar-component/blob/master/LICENSE.md" target="_blank">
+            <img class="m-1" src="https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge" alt="vue-progressbar-component license">
+          </a>
+          <a href="https://www.npmjs.com/package/vue-progressbar-component" target="_blank">
+            <img class="m-1" src="https://img.shields.io/npm/dt/vue-progressbar-component.svg?style=for-the-badge" alt="vue-progressbar-component npm">
+          </a>
+        </p>
       </header>
       <hr>
       <main role="main">
