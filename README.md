@@ -44,30 +44,56 @@ On your page you can now use html like this:
 
 ```html
 <!-- simple progress bar -->
-<progress-bar :value="77"></progress-bar>
+<progress-bar
+  :value="77"
+/>
 
-<!-- change start origin from right-->
-<progress-bar :value="95" origin="right"></progress-bar>
+<!-- add class (color) -->
+<progress-bar
+  :value="88"
+  bar-class="bg-success"
+/>
 
-<!-- change scaleX to scaleY and origin bottom-->
-<progress-bar :value="88" scale="Y" origin="bottom"></progress-bar>
+<!-- change start origin from right -->
+<progress-bar
+  :value="95"
+  origin="right"
+/>
 
+<!-- change scaleX to scaleY and origin bottom -->
+<progress-bar
+  :value="88"
+  scale="Y"
+  origin="bottom"
+/>
 ```
 
 ## CSS
 
 ```scss
-// simple theme
+// example or use it
+@import "./node_modules/vue-progressbar-component/src/scss/progressbar";
+```
+
+Do you like my theme but not the colors or paddings, ...?
+
+```scss
+// overwrite variables
+$progressbar-height: 2rem;
+$progressbar-background: gray;
+// find more variables in /src/scss/_progressbar-variables.scss
+
 @import "./node_modules/vue-progressbar-component/src/scss/progressbar";
 ```
 
 ## Props
 
-|Prop|Type|Required|Sync|Default|Description
+|Prop|Type|Required|Default|Description
 |-|-|-|-|-|-|
-|value|Number|false|false|0|Progress bar (width) from 0 to 100
-|origin|String|false|false|left|Set origin
-|scale|String|false|false|X|Set scaleX or scaleY
+|value|Number|false|0|Progress bar width
+|barClass|String|false|''|Bar class
+|origin|String|false|left|Set origin
+|scale|String|false|X|Set scaleX or scaleY
 
 ## Build Setup
 
