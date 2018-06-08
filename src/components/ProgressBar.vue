@@ -1,49 +1,60 @@
 <template>
-  <div class="progressbar">
-    <div class="progressbar-bar" :style="barStyle">
-      <slot></slot>
+  <div
+    class="progressbar"
+  >
+    <div
+      :class="barClass"
+      :style="barStyle"
+      class="progressbar-bar"
+    >
+      <slot/>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'ProgressBar',
-  props: {
-    value: {
-      type: Number,
-      default: 0
+  export default {
+    name: 'ProgressBar',
+    props: {
+      value: {
+        type: Number,
+        default: 0
+      },
+      barClass: {
+        type: String,
+        default: ''
+      },
+      origin: {
+        type: String,
+        default: 'left'
+      },
+      scale: {
+        type: String,
+        default: 'X',
+        validator: v => ['X', 'Y'].includes(v)
+      }
     },
-    origin: {
-      type: String,
-      default: 'left'
+    data() {
+      return {
+        ready: false
+      }
     },
-    scale: {
-      type: String,
-      default: 'X'
-    }
-  },
-  data() {
-    return {
-      ready: false
-    }
-  },
-  mounted() {
-    setTimeout(() => { this.ready = true }, 0)
-  },
-  computed: {
-    barStyle() {
-      if (!this.ready) {
+    computed: {
+      barStyle() {
+        if (!this.ready) {
+          return {
+            transform: `scale${this.scale}(0)`
+          }
+        }
+
         return {
-          transform: `scale${this.scale}(0)`
+          transform: `scale${this.scale}(${this.value * 0.01})`,
+          transformOrigin: `${this.origin}`
         }
       }
-
-      return {
-        transform: `scale${this.scale}(${this.value * 0.01})`,
-        transformOrigin: `${this.origin}`
-      }
+    },
+    mounted() {
+      setTimeout(() => { this.ready = true }, 0)
     }
   }
-}
 </script>
