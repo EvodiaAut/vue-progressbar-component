@@ -89,7 +89,7 @@ $progressbar-background: gray;
 ## Props
 
 |Prop|Type|Required|Default|Description
-|-|-|-|-|-|-|
+|-|-|-|-|-|
 |value|Number|false|0|Progress bar width
 |barClass|String|false|''|Bar class
 |origin|String|false|left|Set origin
